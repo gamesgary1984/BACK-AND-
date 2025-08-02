@@ -10,8 +10,13 @@ const PORT = process.env.PORT || 3000;
 const connectDB = require('./db');
 connectDB();
 
-// Middleware
-app.use(cors());
+// CORS configuration
+const corsOptions = {
+  origin: '*', // Or specify your frontend URL: 'http://localhost:5173'
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 // app.use(express.static(path.join(__dirname, 'public')));
 

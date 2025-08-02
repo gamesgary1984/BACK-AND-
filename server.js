@@ -27,9 +27,9 @@ app.use('/api/oauth', require('./routes/oauth')); // OAuth callback routes
 app.use('/auth', require('./routes/auth-google')); // Google OAuth routes
 
 // Serve React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 
 // app.listen(PORT, () => {
 //   console.log(`🚀 Swydo Reporting System running on port ${PORT}`);

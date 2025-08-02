@@ -35,3 +35,4 @@ app.use('/auth', require('./routes/auth-google')); // Google OAuth routes
 //   console.log(`🚀 Swydo Reporting System running on port ${PORT}`);
 //   console.log(`📊 Dashboard: http://localhost:${PORT}`);
 // });
+module.exports = app;
